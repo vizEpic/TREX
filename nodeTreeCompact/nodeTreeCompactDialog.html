@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Node Tree Compact configure</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Tableau Extension Library -->
+    <script src="lib/tableau.extensions.1.latest.js"></script>
+
+    <!-- Tableau Extension app JS -->
+    <script src="nodeTreeCompactDialog.js"></script>
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="dialog.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="container" style="max-width:900px">
+        <div class="configLabel">EXTENSION CONFIGURATION</div>
+        <div class="configTitle">Configure the tree</div>
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Hierarchy type</b><br></span>
+                <select id="HierarchyType" class="select">
+                    <option value="parent_child">Parent / Child hierarchy</option>
+                    <option selected value="flat">Flat individual levels</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Select a worksheet</span></b><br></span>
+                <select id="selectWorksheet" class="select">
+                    <option disabled selected="selected">-- None Selected --</option>
+                </select>
+            </div>
+        </div>
+        <div id="parentchild" style="display:none">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <span class="configLabel"><b>Select a dimension</b><br></span>
+                    <select id="selectDimension" class="select">
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <span class="configLabel"><b>Select a field separator</b><br></span>
+                    <input size=1  style="text-align: center" type="text" value="." id="selectDelimiter" class="select" maxlength=1></input>
+                </div>
+            </div>            
+        </div>
+        <div id="flat">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <span class="configLabel"><b>Select level 1</b><br></span>
+                    <select id="Level1" class="select">
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <span class="configLabel"><b>Select level 2</b><br></span>
+                    <select id="Level2" class="select">
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <span class="configLabel"><b>Select level 3</b><br></span>
+                    <select id="Level3" class="select">
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <span class="configLabel"><b>Select level 4 (optional)</b><br></span>
+                    <select id="Level4" class="select">
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <span class="configLabel"><b>Select level 5 (optional)</b><br></span>
+                    <select id="Level5" class="select">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Select a measure</b><br></span>
+                <select id="selectMeasure" class="select">
+                </select>
+                <input type="checkbox" id="showmeasurelabel" name="measurelabel">
+                <label for="showmeasurelabel"> Show as label</label>
+            </div>
+        </div>
+        <div class="row dialog-buttons">
+            <span id="error"></span>
+            <button id="save" class="btn btn-success">Save</button>
+            &nbsp;&nbsp;
+            <button id="cancel" class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+</body>
+
+</html>

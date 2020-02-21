@@ -10,4 +10,4 @@ Build one brick at a time is what they say.  So at inception (now), I have added
 
 So Watch my Vizepic TREX repository for more to come...
 
-./docs/TREX.png
+![TREX first extension image](./docs/TREX.png)

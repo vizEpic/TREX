@@ -1,13 +1,10 @@
-# nodeTreeCompact
-Tableau Extension to enable quick and easy navigation to any level of the hierarchy
-
 # VizEpic extension library
 
 Author: [Jeff Strauss](https://github.com/jstrauss18)
 Date: February 2020
 
-Build one brick at a time is what they say.  So at inception (now), I have added one public extension for general consumption.
+Build one brick at a time...  So at inception (now), I have added one extension for public general consumption.
 
-So Watch my Vizepic TREX repository for more to come...
+Keep watching my Vizepic TREX repository for more to come...
 
 ![TREX first extension image](./docs/TREX.png)

@@ -1,6 +1,6 @@
 # Node Tree Compact
 
-![Node Tree compact image](./docs/nodeTree.png)
+![Node Tree compact image](././docs/nodeTree.png)
 
 ## The concept is simple.
 - Transform your worksheet dimensional data into a vertical hierarchy

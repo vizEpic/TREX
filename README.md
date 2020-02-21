@@ -1,4 +1,4 @@
-# VizEpic extension library
+# VizEpic extension components
 
 Author: [Jeff Strauss](https://github.com/jstrauss18)
 Date: February 2020

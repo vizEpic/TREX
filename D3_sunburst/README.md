@@ -1,6 +1,6 @@
 # Sunburst generator
 
-![Sunburst image](../docs/Sunburst.png)
+![Sunburst image](../docs/sunburst.png)
 
 ## Generate a sunburst with custom colors based on your worksheet data.
 

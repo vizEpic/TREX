@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sunburst chart configure</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <link rel="icon" href="../lib/favicon.ico">
+
+    <!-- Tableau Extension Library -->
+    <script src="../../Shared/tableau-extensions-api/tableau.extensions.1.latest.js"></script>
+
+    <!-- Tableau Extension app JS -->
+    <script src="sunburstDialog.js"></script>
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../style/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../style/styles.css">
+</head>
+
+<body>
+    <div class="container" style="max-width:900px">
+        <div class="configLabel">EXTENSION CONFIGURATION</div>
+        <div class="configTitle">Configure the sunburst</div>
+
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Select Worksheet</span></b><br></span>
+                <select id="selectWorksheet" class="select">
+                    <option disabled selected="selected">-- None Selected --</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Select Dimension 1</b><br></span>
+                <select id="selectDimension1" class="select">
+                    <option disabled selected="selected">-- None Selected --</option>
+                </select>
+                <input type="checkbox" id="showDimension1label" name="showDimension1label">
+                <label for="showDimension1label"> Show as label</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Select Dimension 2</b><br></span>
+                <select id="selectDimension2" class="select">
+                    <option disabled selected="selected">-- None Selected --</option>
+                </select>
+                <input type="checkbox" id="showDimension2label" name="showDimension2label">
+                <label for="showDimension2label"> Show as label</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Select Measure</b><br></span>
+                <select id="selectMeasure" class="select">
+                    <option disabled selected="selected">-- None Selected --</option>
+                </select>
+                <input type="checkbox" id="showMeasurelabel" name="showMeasurelabel">
+                <label for="showMeasurelabel"> Show as label</label>
+            </div>
+        </div>
+        <br>
+        <hr style="border: 1px dashed gray;" />
+
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Include dollar sign:</b><br></span>
+                <input type="radio" name="dollarSign" id="dollarSign_Yes" value="Yes" checked>
+                <label for="dollarSign_Yes">Yes</label>
+                <br>
+                <input type="radio" name="dollarSign" id="dollarSign_No" value="No">
+                <label for="dollarSign_No">No</label>
+                <br>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Select a color scheme:</b><br></span>
+                <select id="selectColor" class="select">
+                    <option value="interpolateBuGn">Blue_Green</option>
+                    <option value="interpolateBuPu">Blue_Purple</option>
+                    <option value="interpolateBlues">Blues</option>
+                    <option value="interpolateBrBG">Brown_BrightGreen</option>
+                    <option value="interpolateCool">Cool</option>
+                    <option value="interpolateCubehelixDefault">Cube_Helix</option>
+                    <option value="interpolateGnBu">Green_Blue</option>
+                    <option value="interpolateGreens">Greens</option>
+                    <option value="interpolateGreys">Greys</option>
+                    <option value="interpolateInferno">Inferno</option>
+                    <option value="interpolateMagma">Magma</option>
+                    <option value="interpolateOrRd">Orange_Red</option>
+                    <option value="interpolateOranges">Oranges</option>
+                    <option value="interpolatePiYG">Pink_YellowGreen</option>
+                    <option value="interpolatePlasma">Plasma</option>
+                    <option value="interpolatePuBu">Purple_Blue</option>
+                    <option value="interpolatePuBuGn">Purple_Blue_Green</option>
+                    <option value="interpolatePRGn">Purple_Green</option>
+                    <option value="interpolatePuOr">Purple_Orange</option>
+                    <option value="interpolatePuRd">Purple_Red</option>
+                    <option value="interpolatePurples">Purples</option>
+                    <option selected value="interpolateRainbow">Rainbow</option>
+                    <option value="interpolateRdBu">Red_Blue</option>
+                    <option value="interpolateRdGy">Red_Grey</option>
+                    <option value="interpolateRdPu">Red_Purple</option>
+                    <option value="interpolateRdYlBu">Red_Yellow_LightBlue</option>
+                    <option value="interpolateRdYlGn">Red_Yellow_LightGreen</option>
+                    <option value="interpolateReds">Reds</option>
+                    <option value="interpolateSinebow">Sinebow</option>
+                    <option value="interpolateSpectral">Spectral</option>
+                    <option value="interpolateViridis">Viridis</option>
+                    <option value="interpolateWarm">Warm</option>
+                    <option value="interpolateYlGn">Yellow_Green</option>
+                    <option value="interpolateYlGnBu">Yellow_Green_Blue</option>
+                    <option value="interpolateYlOrBr">Yellow_Orange_Brown</option>
+                    <option value="interpolateYlOrRd">Yellow_Orange_Red</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <hr style="border: 1px dashed gray;" />
+
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Filter target (optional):</span></b><br></span>
+                <select id="filtersheet" class="select">
+                    <option disabled selected="selected">-- None Selected --</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Select Dimension 1 filter:</b><br></span>
+                <select id="filterDimension1" class="select">
+                    <option disabled selected="selected">-- None Selected --</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <span class="configLabel"><b>Select Dimension 2 filter:</b><br></span>
+                <select id="filterDimension2" class="select">
+                    <option disabled selected="selected">-- None Selected --</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row dialog-buttons">
+            <span id="error"></span>
+            <button id="save" class="btn btn-success">Save</button>
+            &nbsp;&nbsp;
+            <button id="cancel" class="btn btn-danger">Cancel</button>
+        </div>
+    </div>
+</body>
+
+</html>

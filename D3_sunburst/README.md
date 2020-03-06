@@ -10,4 +10,4 @@
 
 - See the samplestore workbook for a demo
 
-- This is an enhancement to the original Sunburst extension.  Kudos to the original creator Man Tsui
+- This is an enhancement to the original Sunburst extension https://github.com/mantsui/Ext_D3_Sunburst.  Kudos to the original creator Man Tsui
